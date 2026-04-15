@@ -3,5 +3,73 @@
 
 body {
   font-family: 'Cormorant Garamond', serif;
-    background-color: #ffe5d1;
+    background-color: #D8935C;
+}
+
+/* SECTION TEMOIGNAGES */
+#temoignages {
+    padding: 60px 20px;
+    text-align: center;
+    background: #D8935C;
+}
+
+.temoignages-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.temoignages-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* CENTRAGE GLOBAL DE LA CARTE */
+.temoignage-card {
+    background: #eaeaea;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center; 
+}
+
+/* TYPE DE MISSION */
+.temoignage-mission {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* COMMENTAIRE */
+.temoignage-comment {
+    margin-bottom: 20px;
+}
+
+/* UTILISATEUR */
+.temoignage-user {
+    display: flex;
+    flex-direction: column; /* avatar au-dessus du prénom */
+    align-items: center;
+}
+
+.temoignage-user img {
+    margin-bottom: 8px;
+}
+
+/* FLÈCHES (VISUEL UNIQUEMENT) */
+.flèche {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ddd;
+    border: none;
+    padding: 10px;
+}
+
+.flèche.gauche {
+    left: -40px;
+}
+
+.flèche.droite {
+    right: -40px;
 }

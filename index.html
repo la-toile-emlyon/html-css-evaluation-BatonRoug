@@ -6,146 +6,175 @@
     <title>Clémence Rivière Studio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <nav>
-        <a href="#accueil">
+
+    <nav class="navbar">
+        <a href="#accueil" class="logo">
             <img src="assets/logotrans.png" alt="Logo de Clémence Rivière Studio">
         </a>
-        <ul>
-            <li><a href="#Promesses">Promesses</a></li>
-            <li><a href="#Prestations">Prestations </a></li>
-            <li><a href="#Projets">Projets </a></li>
+
+        <ul class="nav-links">
+            <li><a href="#promesses"><strong>Promesses</strong></a></li>
+            <li><a href="#prestations"><strong>Services</strong></a></li>
+            <li><a href="#projets"><strong>Réalisations</strong></a></li>
+            <li><a href="#temoignages"><strong>Témoignages</strong></a></li>
         </ul>
-        <div class="button-container">
-            <button>
-            <a href="mailto:contact@example.com" target="_blank">
-                <p>Contact</p>
-            </a>
-        </button>
-        </div>
+
+        <!-- Ouvre un logiciel de mail -->
+        <a href="mailto:contact@example.com" class="btn-contact">
+            Contact
+        </a>
     </nav>
-    <header>
-        <h1>Clémence Rivière Studio</h1>
-        <h3>Révéler le potentiel de chaque espace</h3>
-        <img src="assets\presentation.png" alt="image presentation">
-        <div class="button-container">
-            <button>
-                <a href="tel:+33123456789" target="_blank">
-                    <p>Prendre rendez-vous</p>
+
+    <header class="banniere" id="accueil">
+        <div class="banniere-gauche">
+            <h1>Clémence Rivière Studio</h1>
+            <p class="sous-titre">Révéler le potentiel de chaque espace</p>
+
+            <div class="boutons-container">
+                <a href="tel:+33123456789" class="bouton bouton-principal">
+                    Prendre rendez-vous
                 </a>
-            </button>
-        <div class="button-container">
-            </button>
-            <button>
-                <a href="#projets" target="_blank">
-                    <p>Voir mes réalisations</p>
+                <a href="#projets" class="bouton bouton-secondaire">
+                    Voir mes réalisations
                 </a>
-            </button>
+            </div>
         </div>
+
+        <div class="banniere-droite">
+            <img src="assets/presta-renovation.png" alt="Présentation">
         </div>
     </header>
+
     <main>
-        <section id="Promesses">
-            <h2>Promesses Client</h2>
-            <h3>Une approche centrée sur vos besoins et votre bien-être</h3>
-            <div class="liste-promesses">
-                <ul>
-                    <li>Une approche humaine et créative, centrée sur vos usages et vos envies</li>
-                    <li>Des matériaux durables et des fournisseurs locaux privilégiés</li>
-                    <li>Une expertise esthétique alliée à une rigueur technique</li>
-                    <li>Un accompagnement complet, du croquis à la réception du chantier</li>
-                </ul>
+
+        <section id="promesses">
+            <div class="container">
+                <h2>Promesses</h2>
+                <p class="intro">
+                    Une approche centrée sur vos besoins et votre bien-être, avec une attention particulière aux détails et à la qualité.
+                </p>
+
+                <div class="content">
+                    <div class="images">
+                        <img src="assets/presta-deco-interieur.png" alt="Décoration intérieure">
+                        <img src="assets/presta-amenagement.png" alt="Aménagement">
+                        <img src="assets/presta-renovation.png" alt="Rénovation d'appartement haussmannien">
+                    </div>
+
+                    <div class="texte">
+                        <ul>
+                            <li>Une approche humaine et créative, centrée sur vos usages et vos envies</li>
+                            <li>Des matériaux durables et des fournisseurs locaux privilégiés</li>
+                            <li>Une expertise esthétique alliée à une rigueur technique</li>
+                            <li>Un accompagnement complet, du croquis à la réception du chantier</li>
+                        </ul>
+
+                        <a href="mailto:contact@example.com" class="btn-contact">
+                            Appel à l'action
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="promesses-container">
-                <article class="promesse">
-                    <img src="assets/promesses.png" alt="Promesses 1">
-                </article>
-            </div>
-                   <div class="button-container">
-            <button>
-                <a href="#promesses" target="_blank">
-                    <p>Appel à l'action</p>
-                </a>
-            </button>
-        </div>
         </section>
-        
+
         <section id="prestations">
-            <h2>Nos Prestations</h2>
+            <h2>Services proposés</h2>
+
             <div class="prestations-container">
+
                 <article class="card">
                     <img src="assets/presta-renovation.png" alt="Rénovation">
                     <h3>Rénovation d'appartements</h3>
-                    <div class="card-description">
-                        <div class="button-container">
-                            <button>
-                                <a href="#" target="_blank">
-                                    <p>CTA custom</p>
-                                </a>
-                            </button>
-                        <p>Repenser la circulation, les volumes et la lumière pour créer des intérieurs élégants, fonctionnels et chaleureux.</p>
-                    </div>
+                    <p>
+                        Repenser la circulation, les volumes et la lumière pour créer des intérieurs élégants, fonctionnels et chaleureux
+                    </p>
+                    <a href="#" class="btn">En savoir plus</a>
                 </article>
+
                 <article class="card">
                     <img src="assets/presta-amenagement.png" alt="Aménagement">
                     <h3>Aménagement sur mesure</h3>
-                    <div class="card-description">
-                        <div class="button-container">
-                            <button>
-                                <a href="#" target="_blank">
-                                    <p>CTA custom</p>
-                                </a>
-                            </button>
-                        </div>
-                        <p>Conception de mobilier intégré et d'espaces adaptés à vos besoins : bibliothèques, rangements, cuisines, bureaux...</p>
-                    </div>
+                    <p>
+                        Conception de mobilier intégré et d'espaces adaptés à vos besoins : bibliothèques, rangements, cuisines, bureaux...
+                    </p>
+                    <a href="#" class="btn">En savoir plus</a>
                 </article>
+
                 <article class="card">
-                    <img src="assets/presta-deco-interieur.png" alt="Déco-intérieur">
-                    <h3>Décoration d'intérieur</h3>
-                    <div class="card-description">
-                        <div class="button-container">
-                            <button>
-                                <a href="#" target="_blank">
-                                    <p>CTA custom</p>
-                                </a>
-                            </button>
-                        </div>
-                        <p> Sélection de matériaux, textures et couleurs pour harmoniser votre intérieur et lui donner une identité unique.</p>
-                    </div>
+                    <img src="assets/presta-deco-interieur.png" alt="Décoration">
+                    <h3>Décoration intérieure</h3>
+                    <p>
+                        Sélection de matériaux, textures et couleurs pour harmoniser votre intérieur et lui donner une identité unique.
+                    </p>
+                    <a href="#" class="btn">En savoir plus</a>
                 </article>
+
             </div>
         </section>
+
         <section id="projets">
-            <h2>Nos Projets</h2>
-            <div class="projets-container">
-                <article class="projet">
-                    <img src="assets/haussman.jpg" alt="Projet 1">
+            <h2>Réalisations</h2>
+
+            <div class="projet">
+                <div class="projet-img">
+                    <img src="assets/haussman.jpg" alt="appartement haussmannien">
+                </div>
+                <div class="projet-text">
                     <h3>Rénovation d'un appartement haussmannien - Lyon 6e</h3>
-                    <p>Rénovation complète d'un appartement de 120 m² : ouverture desespaces, mise en valeur des moulures et création d'une cuisine contemporaine contrastée.</p>
-                </article>
-                <article class="projet">
-                    <img src="assets/maison-contemp-Annecy.jpg" alt="Projet 2">
+                    <p>
+                        Rénovation complète d'un appartement de 120 m² : ouverture des espaces, mise en valeur des moulures et création d'une cuisine contemporaine contrastée.
+                    </p>
+                </div>
+            </div>
+
+            <div class="projet reverse">
+                <div class="projet-img">
+                    <img src="assets/maison-contemp-Annecy.jpg" alt="maison contemporaine - Annecy">
+                </div>
+                <div class="projet-text">
                     <h3>Maison contemporaine - Annecy</h3>
-                    <p>Aménagement intérieur complet : création d'un grand espace de vie traversant, matériaux naturels et mobilier sur mesure en bois clair.</p>
-                </article>
-                <article class="projet">
-                    <img src="assets/studio-etudiant-villeurbanne.jpg" alt="Projet 3">
+                    <p>
+                        Aménagement intérieur complet : création d'un grand espace de vie traversant, matériaux naturels et mobilier sur mesure en bois clair.
+                    </p>
+                </div>
+            </div>
+
+            <div class="projet">
+                <div class="projet-img">
+                    <img src="assets/studio-etudiant-villeurbanne.jpg" alt="studio étudiant - Villeurbanne">
+                </div>
+                <div class="projet-text">
                     <h3>Studio étudiant - Villeurbanne</h3>
-                    <p>Optimisation d'un petit espace de 25 m² avec mobilier modulable et ambiance minimaliste chaleureuse.</p>
-                </article>
-                <article class="projet">
-                    <img src="assets/boutique-artisanale-croixrousse.jpg" alt="Projet 4">
+                    <p>
+                        Optimisation d'un petit espace de 25 m² avec mobilier modulable et ambiance minimaliste chaleureuse.
+                    </p>
+                </div>
+            </div>
+
+            <div class="projet reverse">
+                <div class="projet-img">
+                    <img src="assets/boutique-artisanale-croixrousse.jpg" alt="boutique artisanale - Croix Rousse">
+                </div>
+                <div class="projet-text">
                     <h3>Boutique artisanale - Croix Rousse</h3>
-                    <p>Transformation d'un ancien atelier en boutique lumineuse : jeu de textures entre béton ciré, bois brut et verrières d'atelier.</p>
-                </article>
+                    <p>
+                        Transformation d'un ancien atelier en boutique lumineuse : jeu de textures entre béton ciré, bois brut et verrières d'atelier.
+                    </p>
+                </div>
             </div>
         </section>
+
         <section id="temoignages">
             <h2>Témoignages</h2>
+            <br>
+
             <div class="temoignages-container">
                 <button class="flèche gauche">←</button>
+
                 <div class="temoignages-cards">
+
                     <article class="temoignage-card">
                         <p class="temoignage-mission">
                             Rénovation d'appartement
@@ -154,12 +183,13 @@
                             Clémence a su repenser notre espace avec beaucoup d'intelligence et de goût. Le résultat est à la fois pratique et sublime.
                         </p>
                         <div class="temoignage-user">
-                            <img src="https://i.pravatar.cc/40" alt="Client"> <!-- Image aléatoire du client -->
+                            <img src="https://i.pravatar.cc/40" alt="Client">
                             <div>
                                 <strong>Mathilde</strong><br>
                             </div>
                         </div>
                     </article>
+
                     <article class="temoignage-card">
                         <p class="temoignage-mission">
                             Aménagement de bureau
@@ -168,12 +198,13 @@
                             Un vrai sens du détail et une belle écoute de nos besoins. Les meubles sur mesure sont parfaits et l'espace respire.
                         </p>
                         <div class="temoignage-user">
-                            <img src="https://i.pravatar.cc/41" alt="Client"> <!-- Image aléatoire du client -->
+                            <img src="https://i.pravatar.cc/41" alt="Client">
                             <div>
                                 <strong>Olivier</strong><br>
                             </div>
                         </div>
                     </article>
+
                     <article class="temoignage-card">
                         <p class="temoignage-mission">
                             Décoration intérieure
@@ -182,16 +213,77 @@
                             J'adore la nouvelle ambiance de mon salon : couleurs apaisantes, lumière retravaillée, et des matières nobles. Je recommande à 100 %.
                         </p>
                         <div class="temoignage-user">
-                            <img src="https://i.pravatar.cc/42" alt="Client"> <!-- Image aléatoire du client -->
+                            <img src="https://i.pravatar.cc/42" alt="Client">
                             <div>
                                 <strong>Sonia</strong><br>
                             </div>
                         </div>
                     </article>
+
                 </div>
+
                 <button class="flèche droite">→</button>
             </div>
         </section>
+
     </main>
+
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-left">
+                <h2>Prêts à travailler ensemble ?</h2>
+                <p>
+                    Une idée, un projet, une envie de collaboration ?<br>
+                    Contactez-nous, nous serons ravis d'en discuter.<br>
+                    Laissez votre contact téléphonique et je vous rappellerai.
+                </p>
+
+                <div class="reseaux-sociaux">
+                    <a href="https://discord.com" target="_blank">
+                        <img src="assets/discord.svg" alt="Discord">
+                    </a>
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="assets/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://dribbble.com" target="_blank">
+                        <img src="assets/dribbble.svg" alt="Dribbble">
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="assets/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="https://behance.net" target="_blank">
+                        <img src="assets/behance.svg" alt="Behance">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h2>Contactez-nous</h2>
+                <br>
+
+                <p>
+                    Téléphone : 01 23 45 67 89<br>
+                    Email : clémencerivière.studio@gmail.com<br>
+                    Adresse : 3 Rue général Ketchup, 75000 Paris
+                </p>
+
+                <br>
+
+                <div class="footer-formulaire">
+                    <form>
+                        <input type="text" placeholder="Nom">
+                        <input type="text" placeholder="Téléphone">
+                        <input type="email" placeholder="Email">
+                        <textarea placeholder="Message"></textarea>
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
 </body>
 </html>

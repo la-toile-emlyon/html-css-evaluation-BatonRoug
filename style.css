@@ -1,9 +1,387 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Manrope:wght@200..800&display=swap');
 
+html {
+    scroll-behavior: smooth;    /* Rendre le scroll fluide */
+}
+
 body {
-  font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond', serif;
     background-color: #D8935C;
+    padding-top: 80px;
+}
+
+  /* Pour que la navbar fixe évite de cacher le contenu */
+section {
+    scroll-margin-top: 100px;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+
+    background-color: #feece7;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+    height: 70px;
+}
+
+/* Liens */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 23px;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+/* Bouton Contact */
+.btn-contact {
+    background-color: #111;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.btn-contact:hover {
+    background-color: #333;
+}
+
+* {  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banniere {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Partie gauche */
+.banniere-gauche {
+    width: 50%;
+    background: #D8935C;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px;
+}
+
+.banniere-gauche h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sous-titre {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Boutons */
+.boutons-container {
+    display: flex;
+    gap: 20px;
+}
+
+.bouton {
+    text-decoration: none;
+    padding: 15px 25px;
+    font-size: 14px;
+    border: 1px solid #000;
+    transition: 0.3s ease;
+}
+
+/* Bouton principal */
+.bouton-principal {
+    background: #000;
+    color: #fff;
+}
+
+.bouton-principal:hover {
+    background: #333;
+}
+
+/* Bouton secondaire */
+.bouton-secondaire {
+    background: transparent;
+    color: #000;
+}
+
+.bouton-secondaire:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Partie droite */
+.banniere-droite {
+    width: 50%;
+}
+
+.banniere-droite img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#promesses {
+    background: #D8935C;
+    padding: 80px 20px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+#promesses .container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+#promesses h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#promesses .intro {
+    color: #2E2A26;
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* IMAGES */
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* MISE EN FORME DE LA GRILLE */
+.images img:nth-child(1) { 
+    grid-column: span 2;
+}
+
+.images img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background: #ccc;
+    border-radius: 8px;
+}
+
+/* TEXTE */
+.texte ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.texte li {
+    margin-bottom: 20px;
+    padding-left: 30px;
+    position: relative;
+    color: #2E2A26;
+}
+
+/* Icône check */
+.texte li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #2e7d6b;
+    font-weight: bold;
+}
+
+/* BOUTON */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .images {
+        grid-template-columns: 1fr;
+    }
+
+    .images img:nth-child(1) {
+        grid-column: span 1;
+    }
+}
+
+#prestations {
+    background: #D8935C;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+#prestations h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+/* GRID 3 colonnes */
+.prestations-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* CARD */
+.card {
+    background: #feece7;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* TITRE */
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* TEXTE */
+.card p {
+    color: #2E2A26;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* BOUTON */
+.btn {
+    background: #111;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .prestations-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+#projets {
+    padding: 80px 10%;
+    background: #D8935C;
+}
+
+#projets h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 2rem;
+}
+
+.projet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    gap: 50px;
+}
+
+/* Image */
+.projet-img {
+    flex: 1;
+}
+
+.projet-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Texte */
+.projet-text {
+    flex: 1;
+}
+
+.projet-text h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.projet-text p {
+    color: #2E2A26;
+    line-height: 1.6;
+}
+
+/* Inversion */
+.projet.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .projet {
+        flex-direction: column;
+    }
+
+    .projet.reverse {
+        flex-direction: column;
+    }
 }
 
 /* SECTION TEMOIGNAGES */
@@ -27,11 +405,11 @@ body {
 
 /* CENTRAGE GLOBAL DE LA CARTE */
 .temoignage-card {
-    background: #eaeaea;
+    background: #feece7;
     padding: 20px;
     border-radius: 8px;
     width: 30%;
-    text-align: center; 
+    text-align: center;
 }
 
 /* TYPE DE MISSION */
@@ -48,7 +426,7 @@ body {
 /* UTILISATEUR */
 .temoignage-user {
     display: flex;
-    flex-direction: column; /* avatar au-dessus du prénom */
+    flex-direction: column;
     align-items: center;
 }
 
@@ -61,8 +439,8 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #ddd;
-    border: none;
+    background: #feece7;
+    border-radius: 8px;
     padding: 10px;
 }
 
@@ -72,4 +450,85 @@ body {
 
 .flèche.droite {
     right: -40px;
+}
+
+footer {
+    background: #D8935C;
+    border-top: 1px solid #2E2A26;
+    padding: 80px 10%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+/* LEFT SIDE */
+.footer-left {
+    max-width: 500px;
+}
+
+.footer-left h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.footer-left p {
+    color: #2E2A26;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.reseaux-sociaux {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.reseaux-sociaux i {
+    width: 35px;
+    height: 35px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-style: normal;
+}
+
+.reseaux-sociaux i:hover {
+    background: #555;
+}
+
+/* RIGHT SIDE */
+.footer-formulaire {
+    max-width: 400px;
+    width: 100%;
+}
+
+.footer-formulaire input,
+.footer-formulaire textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    background: #e9e9e9;
+    font-size: 14px;
+}
+
+.footer-formulaire textarea {
+    resize: none;
+    height: 120px;
+}
+
+.footer-formulaire button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 150px;
+    cursor: pointer;
 }

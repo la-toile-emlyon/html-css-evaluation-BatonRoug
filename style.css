@@ -70,7 +70,9 @@ section {
     background-color: #333;
 }
 
-* {  
+
+/* Faire en sorte que le site soit compatible avec tout les navigateurs */
+* { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -430,6 +432,7 @@ section {
     align-items: center;
 }
 
+/* IMAGES ALEATOIRES  */
 .temoignage-user img {
     margin-bottom: 8px;
 }
@@ -444,6 +447,7 @@ section {
     padding: 10px;
 }
 
+/* Flèches cliquable mais non fonctionnelles */
 .flèche.gauche {
     left: -40px;
 }

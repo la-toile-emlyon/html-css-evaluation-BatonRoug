@@ -206,12 +206,12 @@ section {
 /* TEXTE */
 .texte ul {
     list-style: none;
-    padding: 0;
+    padding: 20px;
     text-align: left;
 }
 
 .texte li {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding-left: 30px;
     position: relative;
     color: #2E2A26;
@@ -350,6 +350,7 @@ section {
 }
 
 .projet-img img {
+    border-radius: 8px;
     width: 100%;
     height: auto;
     display: block;
@@ -388,7 +389,7 @@ section {
 
 /* SECTION TEMOIGNAGES */
 #temoignages {
-    padding: 60px 20px;
+    padding: 30px 20px;
     text-align: center;
     background: #D8935C;
 }
@@ -435,13 +436,14 @@ section {
 /* IMAGES ALEATOIRES  */
 .temoignage-user img {
     margin-bottom: 8px;
+    width: 20%;
+    height: 20%;
 }
 
 /* FLÈCHES (VISUEL UNIQUEMENT) */
 .flèche {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     background: #feece7;
     border-radius: 8px;
     padding: 10px;
@@ -455,6 +457,9 @@ section {
 .flèche.droite {
     right: -40px;
 }
+
+
+/* FOOTER */
 
 footer {
     background: #D8935C;
@@ -513,6 +518,8 @@ footer {
     width: 100%;
 }
 
+
+/* FORMAT FORMULAIRE */
 .footer-formulaire input,
 .footer-formulaire textarea {
     width: 100%;
@@ -534,5 +541,34 @@ footer {
     border: none;
     padding: 15px;
     width: 150px;
-    cursor: pointer;
+    cursor: pointer;  /* Curseur souris en mode "click" */
+}
+
+/* EFFET VISUEL IMAGES */
+
+.images img,
+
+.card img {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.card,
+.projet-img img {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.images img:hover,
+.projet-img img:hover {
+    transform: translateY(-5px);  
+}
+
+/* EFFET VISUEL TITRES */
+
+    text-shadow: 
+        1px 1px 0px rgba(0, 0, 0, 0.2),
+        2px 2px 6px rgba(0, 0, 0, 0.15);
+}
+section p {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
 }

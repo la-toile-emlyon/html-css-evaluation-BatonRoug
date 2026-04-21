@@ -217,12 +217,12 @@ section {
     color: #2E2A26;
 }
 
-/* Icône check */
+/* Icône carré*/
 .texte li::before {
-    content: "✔";
+    content: "■";
     position: absolute;
     left: 0;
-    color: #2e7d6b;
+    color: #000000;
     font-weight: bold;
 }
 
